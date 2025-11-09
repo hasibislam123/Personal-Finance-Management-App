@@ -12,6 +12,7 @@ import Login from "./Page/Auth/Login.jsx";
 import Register from "./Page/Auth/Register.jsx";
 import Profile from "./Page/Profile/Profile.jsx";
 import PrivateRoute from "./Routes/PrivateRoutes.jsx";
+import View from "./Component/View/View.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <UpdateTransaction />
+          </PrivateRoute>
+        ),
+      },
+       {
+        path: "transactions/:id", // View transaction route
+        element: (
+          <PrivateRoute>
+            <View></View>
           </PrivateRoute>
         ),
       },
