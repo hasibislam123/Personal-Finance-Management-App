@@ -209,7 +209,9 @@ const MyTransactions = () => {
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </div>  
+                          
+                          
                     ))}
                 </div>
             )}
