@@ -4,6 +4,8 @@ import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../Contexts/AuthContext";
 import toast from "react-hot-toast";
+import login from "../../assets/login.svg";
+
 
 const Login = () => {
   const { signInUser, googleSignIn } = useContext(AuthContext);
@@ -42,7 +44,9 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-[#64b5f6]">
       <div className="backdrop-blur-md bg-white/10 p-8 rounded-2xl shadow-2xl w-full max-w-md border border-white/20">
         <h2 className="text-3xl font-bold text-white mb-6 text-center">
-          Welcome Back
+
+          Log In
+          <img className="h-50" src={login} alt="" />
         </h2>
 
         <form onSubmit={handleLogin} className="flex flex-col gap-4">

@@ -4,6 +4,7 @@ import { AuthContext } from "../../Contexts/AuthContext";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; 
 import toast from "react-hot-toast";
+import signup from '../../assets/signup.svg'
 
 const Register = () => {
   const { createUser, googleSignIn, updateUserProfile, setUser } = useContext(AuthContext);
@@ -61,6 +62,7 @@ const Register = () => {
       <div className="backdrop-blur-md bg-white/10 p-8 rounded-2xl shadow-2xl w-full max-w-md border border-white/20">
         <h2 className="text-3xl font-bold text-white mb-6 text-center">
           Create an Account
+          <img src={signup} alt="" />
         </h2>
 
         <form onSubmit={handleRegister} className="flex flex-col gap-4">
@@ -68,21 +70,21 @@ const Register = () => {
             type="text"
             name="name"
             placeholder="Full Name"
-            className="px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0496ff]"
+            className="px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-[#0496ff]"
             required
           />
           <input
             type="email"
             name="email"
             placeholder="Email Address"
-            className="px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0496ff]"
+            className="px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-[#0496ff]"
             required
           />
           <input
             type="text"
             name="photoURL"
             placeholder="Photo URL (optional)"
-            className="px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0496ff]"
+            className="px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-[#0496ff]"
           />
 
           <div className="relative">
@@ -90,7 +92,7 @@ const Register = () => {
               type={showPassword ? "text" : "password"}
               name="password"
               placeholder="Password"
-              className="px-4 py-3 w-full rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0496ff]"
+              className="px-4 py-3 w-full rounded-lg bg-white/20 text-white placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-[#0496ff]"
               required
             />
             <span
